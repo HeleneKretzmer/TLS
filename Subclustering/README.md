@@ -1,1 +1,1 @@
-Somite and Neural Tube subclustering performed using scanpy.
+Pseudotime analysis and Somite and Neural Tube subclustering performed using scanpy.
