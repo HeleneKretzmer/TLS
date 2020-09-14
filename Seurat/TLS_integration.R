@@ -39,7 +39,7 @@ TLS <- CellCycleScoring(TLS, s.features = s.genes, g2m.features = g2m.genes, set
 TLS <- RunPCA(TLS, features = c(s.genes, g2m.genes))
 TLS <- ScaleData(TLS, vars.to.regress = c("S.Score", "G2M.Score"), features = rownames(TLS))
 TLS <- FindNeighbors(TLS, dims = 1:10)
-TLS <- FindClusters(TLS)
+TLS <- FindClusters(TLS, resolution = 0.5)
 TLS <- RunUMAP(object = TLS, dims = 1:10)
 TLS <- RunPCA(TLS, features = c(s.genes, g2m.genes))
 
