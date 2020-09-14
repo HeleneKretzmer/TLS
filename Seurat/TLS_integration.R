@@ -46,5 +46,5 @@ TLS <- RunPCA(TLS, features = c(s.genes, g2m.genes))
 
 # Filter for cells that survived scanpy based QC and remove cluster 10 and 11
 BCs <- read.table("good_cells.csv")
-TLS <- subset(TLS, cells=c(paste0(BCs$V1, "_1"), paste0(BCs$V1, "_2"), paste0(BCs$V1, "_3")))
+TLS <- subset(TLS, cells=BCs$V1)
 TLS <- subset(TLS, cells=rownames(subset(TLS@meta.data, !seurat_clusters %in% c("Seurat_10","Seurat_11"))))
